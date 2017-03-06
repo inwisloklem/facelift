@@ -1,0 +1,165 @@
+doctype html
+
+html(lang = "ru")
+  include parts/head.pug
+
+  body
+    header.page-header
+      .page-header__hgroup
+        h2.page-header__title
+          | Молодая и упругая кожа в любом возрасте это реально!
+        h2.page-header__title
+          | Попробуйте новую аппаратную методику омоложения лица бесплатно!
+
+      .page-header__wrapper
+        h3.page-header__note Акция для женщин Москвы
+
+        .regform
+          form.regform__form(action = "#", method = "post")
+            input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
+            input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
+
+            button.btn(type = "submit") Записаться
+
+        .timer.page-header__timer
+          h3.timer__title До окончания акции:
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--day-1 0
+              .timer__cell.timer__cell--day-2 0
+            .timer__text Дней
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--hour-1 0
+              .timer__cell.timer__cell--hour-2 0
+            .timer__text Часов
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--min-1 0
+              .timer__cell.timer__cell--min-2 0
+            .timer__text Минут
+
+          .timer__block
+            .timer__wrapper
+              .timer__cell.timer__cell--sec-1 0
+              .timer__cell.timer__cell--sec-2 0
+            .timer__text Секунд
+
+
+    main
+      section.problems
+        h2.problems__title
+          | Вам необходима аппаратная процедура омоложения лица, если у вас есть следующие признаки изменения кожи:
+
+        figure.problems__image
+          img(src = "img/image-problems.jpg", width = 400, height = 358, alt = "Процедура омоложения")
+
+        ul.problems__list
+          li.problems__item явные признаки старения кожи,
+          li.problems__item заметные морщины в области глаз и губ,
+          li.problems__item угревая сыпь,
+          li.problems__item возрастные пигментные пятна,
+          li.problems__item заметная потеря эластичности и упругости кожи,
+          li.problems__item потеря четкости контура овала лица,
+          li.problems__item опущение бровей, нависание и излишки кожи верхних век,
+
+      section.about
+        .about__background
+          .about__text 
+            | В эффективности аппаратной методики омоложения лица уже убедились более 10000 женщин по всей России!
+
+          h2.about__title О методике
+
+        ul.about__list
+          li.about__item
+            .about__desc Возвращает коже упрогость и молодость
+            figure.about__image
+              img(src = "img/image-about-1.jpg", width = 255, height = 255, alt = "Процедура омоложения")
+          li.about__item
+            .about__desc Разглаживает все виды морщин
+            figure.about__image
+              img(src = "img/image-about-2.jpg", width = 255, height = 255, alt = "Процедура омоложения")
+          li.about__item
+            .about__desc Избавляет от отеков под глазами
+            figure.about__image
+              img(src = "img/image-about-3.jpg", width = 255, height = 255, alt = "Процедура омоложения")
+
+      section.features
+        .features__hgroup
+          h2.features__title Хотите здоровую, красивую и упругую кожу?
+          h2.features__title С новой методикой омоложения лица это стало реальностью!
+
+          .features__wrapper
+            figure.features__image
+              img(src = "img/features-image.png", width = 280, height = 194, alt = "Ветка черники")
+
+            ul.features__list
+              li.features__item
+                | Процедура полностью безболезнена, кожный покров не нарушается,
+                | поэтому пациент не испытывает боли ни во время сеанса, ни после него
+              li.features__item
+                | После прохождения процедуры следует стойкий и длительный
+                | эффект омоложения, который заметен уже после первого сеанса
+              li.features__item
+                | Наша аппаратная методика прошла сертификацию качества
+                | в лабораториях Европы и США. Она полностью безопасна
+
+      section.results
+
+      section.reviews
+
+      section.prohibit
+        h2.prohibit__title ПРОТИВОПОКАЗАНИЯ К ПРИМЕНЕНИЮ ПРОЦЕДУРЫ
+
+        ul.prohibit__list
+          li.prohibit__item беременность
+          li.prohibit__item лактация
+          li.prohibit__item открытые раны или поражения кожи
+          li.prohibit__item 
+            | металлические и электрические шунты/имплантаты/устройства, 
+            | расположенные в области лица и шеи (зубные имплантаты не являются противопоказанием)
+          li.prohibit__item активная бактериальная, вирусная или грибковая 
+          li.prohibit__item инфекция в местах проведения процедуры
+          li.prohibit__item эпилепсия
+          li.prohibit__item онкологические заболевания
+
+    footer.page-footer
+      form.regform__form.regform__form--flat(action = "#", method = "post")
+        input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
+        input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
+
+        button.btn(type = "submit") Записаться
+
+      .page-footer__note Акция действует до 13 февраля!
+
+      .timer.page-footer__timer
+        h3.timer__title До окончания акции:
+
+        .timer__block
+          .timer__wrapper
+            .timer__cell.timer__cell--day-1 0
+            .timer__cell.timer__cell--day-2 0
+          .timer__text Дней
+
+        .timer__block
+          .timer__wrapper
+            .timer__cell.timer__cell--hour-1 0
+            .timer__cell.timer__cell--hour-2 0
+          .timer__text Часов
+
+        .timer__block
+          .timer__wrapper
+            .timer__cell.timer__cell--min-1 0
+            .timer__cell.timer__cell--min-2 0
+          .timer__text Минут
+
+        .timer__block
+          .timer__wrapper
+            .timer__cell.timer__cell--sec-1 0
+            .timer__cell.timer__cell--sec-2 0
+          .timer__text Секунд
+
+    script(src = "js/timer.js")
