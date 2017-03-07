@@ -17,6 +17,8 @@
   src: local("Helvetica Neue Cyr"), url("../fonts/helveticaneuecyr-bold.woff") format("woff"), url("../fonts/helveticaneuecyr-bold.woff2") format("woff2");
 }
 body {
+  min-width: 320px;
+  max-width: 640px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 100%;
   font-weight: 200;
@@ -39,6 +41,71 @@ ul {
 figure,
 ul {
   padding: 0;
+}
+.problems__list {
+  font-size: 1.125em;
+  line-height: 1.333;
+}
+.problems__item {
+  margin-bottom: 15px;
+  padding-left: 32px;
+  list-style-type: none;
+  background: url("../img/icon-list-1.png") no-repeat left center;
+}
+.problems__item:last-of-type {
+  margin-bottom: 0;
+}
+.prohibit__list {
+  font-size: 1.125em;
+  line-height: 1.333;
+}
+.prohibit__item {
+  margin-bottom: 15px;
+  padding-left: 32px;
+  list-style-type: none;
+  background: url("../img/icon-list-2.png") no-repeat left center;
+}
+.prohibit__item:last-of-type {
+  margin-bottom: 0;
+}
+.timer {
+  text-align: center;
+}
+.timer__title {
+  margin-bottom: 10px;
+  color: #363636;
+  text-align: center;
+  text-transform: none;
+  font-size: 1.4em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.timer__block {
+  display: inline-block;
+  margin-right: 4px;
+}
+.timer__block:last-of-type {
+  margin-right: 0;
+}
+.timer__cell {
+  display: inline-block;
+  margin-right: 3px;
+  width: 30px;
+  height: 40px;
+  border-radius: 5px;
+  color: #363636;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.98;
+}
+.timer__text {
+  color: #363636;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 0.94em;
+  line-height: 1.2;
 }
 .visually-hidden {
   display: none;

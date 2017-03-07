@@ -48,7 +48,6 @@ html(lang = "ru")
               .timer__cell.timer__cell--sec-2 0
             .timer__text Секунд
 
-
     main
       section.problems
         h2.problems__title
@@ -75,7 +74,7 @@ html(lang = "ru")
 
         ul.about__list
           li.about__item
-            .about__desc Возвращает коже упрогость и молодость
+            .about__desc Возвращает коже упругость и молодость
             figure.about__image
               img(src = "img/image-about-1.jpg", width = 255, height = 255, alt = "Процедура омоложения")
           li.about__item
@@ -108,11 +107,112 @@ html(lang = "ru")
                 | в лабораториях Европы и США. Она полностью безопасна
 
       section.results
+        ul.results__list
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-1-before.jpg", width = "155", height = "137", alt = "До")
+            figure.results__after
+              img.results__img(src = "img/image-1-after.jpg", width = "155", height = "137", alt = "После")
+
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-2-before.jpg", width = "138", height = "170", alt = "До")
+            figure.results__after
+              img.results__img(src = "img/image-2-after.jpg", width = "138", height = "170", alt = "После")
+
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-3-before.jpg", width = "155", height = "137", alt = "До")
+            figure.results__after
+              img.results__img(src = "img/image-3-after.jpg", width = "155", height = "137", alt = "После")
+
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-4-before.jpg", width = "156", height = "108", alt = "До")
+            figure.results__after
+              img.results__img(src = "img/image-4-after.jpg", width = "156", height = "108", alt = "После")
+
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-5-before.jpg", width = "139", height = "132", alt = "До")
+            figure.results__after
+              img.results__img(src = "img/image-5-after.jpg", width = "139", height = "132", alt = "После")
+
+          li.results__item
+            figure.results__before
+              img.results__img(src = "img/image-6-before.jpg", width = "154", height = "108", alt = "До")
+            figure.results__after
+              img.results__img(src = "img/image-6-after.jpg", width = "154", height = "108", alt = "После")
 
       section.reviews
+          h2.reviews__title Отзывы наших клиентов
+
+          ul.reviews__list
+            li.reviews__item
+              .reviews__text
+                p.reviews__ph
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Nullam quis risus eget urna mollis ornare vel eu leo.
+                  | Donec ullamcorper nulla
+                p.reviews__ph
+                  | Nullam quis risus eget urna mollis ornare vel eu leo.
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Donec ullamcorper nulla
+                p.reviews__ph
+                  | Donec ullamcorper nulla.
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Nullam quis risus eget urna mollis ornare vel eu leo
+              .reviews__wrapper
+                .reviews__image
+                  img(src = "img/image-avatar.png", width = 80, height = 80, alt = "Аватар")
+                .reviews__name Светлана Иванова
+                .reviews__age 45 лет
+                .reviews__city Москва
+
+            li.reviews__item
+              .reviews__text
+                p.reviews__ph
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Nullam quis risus eget urna mollis ornare vel eu leo.
+                  | Donec ullamcorper nulla
+                p.reviews__ph
+                  | Nullam quis risus eget urna mollis ornare vel eu leo.
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Donec ullamcorper nulla
+                p.reviews__ph
+                  | Donec ullamcorper nulla.
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Nullam quis risus eget urna mollis ornare vel eu leo
+              .reviews__wrapper
+                .reviews__image
+                  img(src = "img/image-avatar.png", width = 80, height = 80, alt = "Аватар")
+                .reviews__name Ирина Круглова
+                .reviews__age 38 лет
+                .reviews__city Москва
+
+            li.reviews__item
+              .reviews__text
+                p.reviews__ph
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Nullam quis risus eget urna mollis ornare vel eu leo.
+                  | Donec ullamcorper nulla
+                p.reviews__ph
+                  | Nullam quis risus eget urna mollis ornare vel eu leo.
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Donec ullamcorper nulla
+                p.reviews__ph
+                  | Donec ullamcorper nulla.
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  | Nullam quis risus eget urna mollis ornare vel eu leo
+              .reviews__wrapper
+                .reviews__image
+                  img(src = "img/image-avatar.png", width = 80, height = 80, alt = "Аватар")
+                .reviews__name Марина Чехова
+                .reviews__age 55 лет
+                .reviews__city Москва
 
       section.prohibit
-        h2.prohibit__title ПРОТИВОПОКАЗАНИЯ К ПРИМЕНЕНИЮ ПРОЦЕДУРЫ
+        h2.prohibit__title Противопоказания к применению процедуры
 
         ul.prohibit__list
           li.prohibit__item беременность
@@ -161,5 +261,9 @@ html(lang = "ru")
             .timer__cell.timer__cell--sec-1 0
             .timer__cell.timer__cell--sec-2 0
           .timer__text Секунд
+
+    .page-footer__hgroup
+      h3.page-footer__note Не упустите свой шанс пройти процедуру омоложения бесплатно!
+      h3.page-footer__note Акция действует до 13 февраля!
 
     script(src = "js/timer.js")
