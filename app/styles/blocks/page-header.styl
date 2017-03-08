@@ -1,0 +1,27 @@
+.page-header
+  overflow: auto
+  background-color: $robins-egg-blue
+  background-image: linear-gradient(to bottom, $feta 0, $robins-egg-blue 100%)
+  
+  @media $tablet-desktop
+    background-image: url("../img/background-top.png"), linear-gradient(to bottom, $feta 0, $robins-egg-blue 100%)
+    background-size: cover
+
+  &__title
+    margin-bottom: 20px
+    text-align: center
+    font(1.3125em, 1.333, 500, uppercase)
+
+  &__regform
+  &__timer
+    margin-bottom: 20px
+
+  &__hgroup
+    margin-top: 40px
+
+  &__note
+    margin-bottom: 20px
+    color: $amaranth
+    text-align: center
+    text-decoration: underline
+    font(1.3125em, 1.333, 500, uppercase)

@@ -2,7 +2,7 @@
 
 window.onload = function() {
   // Время задаётся в формате: секунда, минута, час, день, месяц, год
-  initTimer(0, 0, 24, 8, 3, 2017);
+  initTimer(0, 0, 24, 10, 3, 2017);
 }
 
 function initTimer(second, minute, hour, day, month, year) {

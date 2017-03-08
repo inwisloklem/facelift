@@ -5,51 +5,54 @@ html(lang = "ru")
 
   body
     header.page-header
-      .page-header__hgroup
-        h2.page-header__title
-          | Молодая и упругая кожа в любом возрасте это реально!
-        h2.page-header__title
-          | Попробуйте новую аппаратную методику омоложения лица бесплатно!
+      .container
+        .page-header__hgroup
+          h2.page-header__title
+            | Молодая и упругая кожа в любом возрасте — это реально!
+          h2.page-header__title
+            | Попробуйте новую аппаратную методику омоложения лица бесплатно!
 
-      .page-header__wrapper
-        h3.page-header__note Акция для женщин Москвы
+        .page-header__wrapper
+          h3.page-header__note Акция для женщин Москвы
 
-        .regform
-          form.regform__form(action = "#", method = "post")
-            input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
-            input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
+          .regform.page-header__regform
+            h3.regform__title Успей до 13 февраля!
 
-            button.btn(type = "submit") Записаться
+            form.regform__form(action = "#", method = "post")
+              input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
+              input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
 
-        .timer.page-header__timer
-          h3.timer__title До окончания акции:
+              button.btn.regform__btn(type = "submit") Записаться
 
-          .timer__block
-            .timer__wrapper
-              .timer__cell.timer__cell--day-1 0
-              .timer__cell.timer__cell--day-2 0
-            .timer__text Дней
+          .timer.page-header__timer
+            h3.timer__title До окончания акции:
 
-          .timer__block
-            .timer__wrapper
-              .timer__cell.timer__cell--hour-1 0
-              .timer__cell.timer__cell--hour-2 0
-            .timer__text Часов
+            .timer__block
+              .timer__wrapper
+                .timer__cell.timer__cell--day-1 0
+                .timer__cell.timer__cell--day-2 0
+              .timer__text Дней
 
-          .timer__block
-            .timer__wrapper
-              .timer__cell.timer__cell--min-1 0
-              .timer__cell.timer__cell--min-2 0
-            .timer__text Минут
+            .timer__block
+              .timer__wrapper
+                .timer__cell.timer__cell--hour-1 0
+                .timer__cell.timer__cell--hour-2 0
+              .timer__text Часов
 
-          .timer__block
-            .timer__wrapper
-              .timer__cell.timer__cell--sec-1 0
-              .timer__cell.timer__cell--sec-2 0
-            .timer__text Секунд
+            .timer__block
+              .timer__wrapper
+                .timer__cell.timer__cell--min-1 0
+                .timer__cell.timer__cell--min-2 0
+              .timer__text Минут
+
+            .timer__block
+              .timer__wrapper
+                .timer__cell.timer__cell--sec-1 0
+                .timer__cell.timer__cell--sec-2 0
+              .timer__text Секунд
 
     main
-      section.problems
+      section.problems.container
         h2.problems__title
           | Вам необходима аппаратная процедура омоложения лица, если у вас есть следующие признаки изменения кожи:
 
@@ -65,10 +68,10 @@ html(lang = "ru")
           li.problems__item потеря четкости контура овала лица,
           li.problems__item опущение бровей, нависание и излишки кожи верхних век,
 
-      section.about
+      section.about.container
         .about__background
           .about__text 
-            | В эффективности аппаратной методики омоложения лица уже убедились более 10000 женщин по всей России!
+            | В эффективности аппаратной методики омоложения лица уже убедились #[span.about__accent более 10&nbsp;000 женщин] по всей России!
 
           h2.about__title О методике
 
@@ -86,7 +89,7 @@ html(lang = "ru")
             figure.about__image
               img(src = "img/image-about-3.jpg", width = 255, height = 255, alt = "Процедура омоложения")
 
-      section.features
+      section.features.container
         .features__hgroup
           h2.features__title Хотите здоровую, красивую и упругую кожу?
           h2.features__title С новой методикой омоложения лица это стало реальностью!
@@ -106,7 +109,9 @@ html(lang = "ru")
                 | Наша аппаратная методика прошла сертификацию качества
                 | в лабораториях Европы и США. Она полностью безопасна
 
-      section.results
+      section.results.container
+        h2.results__title Результаты
+
         ul.results__list
           li.results__item
             figure.results__before
@@ -144,7 +149,7 @@ html(lang = "ru")
             figure.results__after
               img.results__img(src = "img/image-6-after.jpg", width = "154", height = "108", alt = "После")
 
-      section.reviews
+      section.reviews.container
           h2.reviews__title Отзывы наших клиентов
 
           ul.reviews__list
@@ -158,16 +163,12 @@ html(lang = "ru")
                   | Nullam quis risus eget urna mollis ornare vel eu leo.
                   | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
                   | Donec ullamcorper nulla
-                p.reviews__ph
-                  | Donec ullamcorper nulla.
-                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  | Nullam quis risus eget urna mollis ornare vel eu leo
               .reviews__wrapper
                 .reviews__image
                   img(src = "img/image-avatar.png", width = 80, height = 80, alt = "Аватар")
-                .reviews__name Светлана Иванова
+                .reviews__name Светлана&nbsp;Иванова
                 .reviews__age 45 лет
-                .reviews__city Москва
+                .reviews__city г. Москва
 
             li.reviews__item
               .reviews__text
@@ -179,16 +180,12 @@ html(lang = "ru")
                   | Nullam quis risus eget urna mollis ornare vel eu leo.
                   | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
                   | Donec ullamcorper nulla
-                p.reviews__ph
-                  | Donec ullamcorper nulla.
-                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  | Nullam quis risus eget urna mollis ornare vel eu leo
               .reviews__wrapper
                 .reviews__image
                   img(src = "img/image-avatar.png", width = 80, height = 80, alt = "Аватар")
-                .reviews__name Ирина Круглова
+                .reviews__name Ирина&nbsp;Круглова
                 .reviews__age 38 лет
-                .reviews__city Москва
+                .reviews__city г. Москва
 
             li.reviews__item
               .reviews__text
@@ -200,18 +197,14 @@ html(lang = "ru")
                   | Nullam quis risus eget urna mollis ornare vel eu leo.
                   | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
                   | Donec ullamcorper nulla
-                p.reviews__ph
-                  | Donec ullamcorper nulla.
-                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  | Nullam quis risus eget urna mollis ornare vel eu leo
               .reviews__wrapper
                 .reviews__image
                   img(src = "img/image-avatar.png", width = 80, height = 80, alt = "Аватар")
                 .reviews__name Марина Чехова
                 .reviews__age 55 лет
-                .reviews__city Москва
+                .reviews__city г. Москва
 
-      section.prohibit
+      section.prohibit.container
         h2.prohibit__title Противопоказания к применению процедуры
 
         ul.prohibit__list
@@ -227,13 +220,15 @@ html(lang = "ru")
           li.prohibit__item онкологические заболевания
 
     footer.page-footer
-      form.regform__form.regform__form--flat(action = "#", method = "post")
-        input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
-        input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
+      .regform.page-footer__regform
+        form.regform__form.regform__form--flat(action = "#", method = "post")
+          input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
+          input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
 
-        button.btn(type = "submit") Записаться
+          button.btn(type = "submit") Записаться
 
-      .page-footer__note Акция действует до 13 февраля!
+      .page-footer__note.page-footer__note--accent Акция действует до 13 февраля!
+      .page-footer__note Не упустите свой шанс пройти процедуру омоложения бесплатно!
 
       .timer.page-footer__timer
         h3.timer__title До окончания акции:
@@ -262,8 +257,11 @@ html(lang = "ru")
             .timer__cell.timer__cell--sec-2 0
           .timer__text Секунд
 
-    .page-footer__hgroup
-      h3.page-footer__note Не упустите свой шанс пройти процедуру омоложения бесплатно!
-      h3.page-footer__note Акция действует до 13 февраля!
+      section.copyright
+        .copyright__text
+          | ООО&nbsp;"Доктор&nbsp;Борменталь" Лицензия&nbsp;№&nbsp;ЛО-77-01-006633&nbsp;от&nbsp;04.09.2013
+          br
+          | 121059,&nbsp;г.&nbsp;Москва,&nbsp;Украинский бульвар,&nbsp;д.&nbsp;5
+        a.copyright__link(href = "http://cpapartizan.ru/politika.php", target = "_blank") Политика конфиденциальности
 
     script(src = "js/timer.js")

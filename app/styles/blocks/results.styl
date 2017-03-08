@@ -1,0 +1,51 @@
+.results
+  &__title
+    margin-top: 20px
+    margin-bottom: 15px
+    text-align: center
+    font(1.3125em, 1.333, 700, uppercase)
+
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    list-style-type: none
+    
+  &__item
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: flex-end
+    margin-bottom: 40px
+
+  &__before
+  &__after
+    position: relative
+
+    &::after
+      position: absolute
+      bottom: -15px
+      left: -5px
+      display: block
+      padding: 0 10px
+      padding-top: 4px
+      width: 55px
+      background-color: $robins-egg-blue
+      border-bottom-left-radius: 25px
+      border-top-right-radius: 25px
+      color: $white
+      text-transform: uppercase
+      text-align: center
+      font(0.875em, 20px)
+
+  &__before
+    border-right: 4px solid transparent
+
+    &::after
+      content: "до"
+
+  &__after
+    border-left: 4px solid transparent
+
+    &::after
+      content: "после"

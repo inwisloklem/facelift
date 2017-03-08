@@ -1,0 +1,56 @@
+.about
+  overflow: auto
+  
+  &__background
+    text-align: center
+
+  &__text
+    margin-top: 20px
+    margin-bottom: 40px
+    color: $mine-shaft
+    text-align: center
+    font(1.5em, 1.333, 200, uppercase)
+    
+  &__accent
+    color: $royal-blue
+    font(1.125em)
+
+  &__title
+    display: inline-block
+    margin-bottom: 20px
+    padding: 10px 30px 5px
+    border: none
+    border-radius: 20px
+    text-align: center
+    background-color: darken($white, 5%)
+    font(1.3125em, 1.333, 500, uppercase)
+
+  &__list
+    list-style-type: none
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__item
+    display: flex
+    flex-direction: column
+    width: 255px
+    margin-bottom: 20px
+    font-size: 0
+    box-shadow: 0 0 8px 0 rgba($blue-charcoal, 0.2)
+
+    &:nth-of-type(3n+1)
+      margin-right: 40%
+
+    &:nth-of-type(3n+3)
+      margin-left: 40%
+
+  &__desc
+    box-sizing: border-box
+    padding: 25px
+    padding-bottom: 20px
+    // min-height: 100px
+    text-align: center
+    background-color: $robins-egg-blue
+    background-image: linear-gradient(to bottom, $robins-egg-blue 0, $feta 100%)
+    font(1.0625rem, 1.333, 200, uppercase)
