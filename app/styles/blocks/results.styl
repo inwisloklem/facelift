@@ -1,6 +1,6 @@
 .results
   &__title
-    margin-top: 20px
+    margin-top: 40px
     margin-bottom: 15px
     text-align: center
     font(1.3125em, 1.333, 700, uppercase)
@@ -11,6 +11,20 @@
     align-items: center
     list-style-type: none
     
+    @media $tablet-desktop
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      margin: auto
+      justify-content: space-between
+      align-items: flex-start
+      
+    @media $tablet
+      max-width: 700px
+      
+    @media $desktop
+      max-width: 1000px
+
   &__item
     display: flex
     flex-direction: row

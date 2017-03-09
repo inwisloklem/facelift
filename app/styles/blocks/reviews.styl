@@ -1,5 +1,13 @@
 .reviews
+  overflow: auto
+
+  @media $desktop
+    padding: 40px 0
+    background-image: url("../img/background-review.png")
+    background-size: cover
+
   &__title
+    margin-top: 20px
     margin-bottom: 20px
     text-align: center
     font(1.3125em, 1.333, 700, uppercase)
@@ -8,22 +16,65 @@
     list-style-type: none
 
   &__item
+    position: relative
     display: flex
-    flex-direction: row-reverse
-    margin-bottom: 20px
-    padding: 25px
-    padding-left: 0
-    border-radius: 20px
-    box-shadow: 0 0 15px 1px rgba($blue-charcoal, 0.2)
+    flex-direction: column
+    background-color: $white
+    
+    @media $tablet-desktop
+      flex-direction: row-reverse
+      margin-bottom: 20px
+      padding: 25px
+      padding-left: 0
+      border-radius: 20px
+      box-shadow: 0 0 15px 1px rgba($blue-charcoal, 0.2)
+      
+    @media $desktop
+      padding-right: 40px
+
+      &::before
+      &::after
+        position: absolute
+        display: block
+        width: 56px
+        height: 56px
+        border-radius: 50%
+        background-color: $apple-green
+        box-shadow: 0 0 15px 1px rgba($blue-charcoal, 0.2)
+        content: ""
+        background-image: url("../img/image-quotes.png")
+        background-position: center
+        background-repeat: no-repeat
+
+      &::before
+        left: -28px
+        bottom: 20px
+
+      &::after
+        right: -28px
+        top: 20px
+
+        transform: rotate(180deg)
 
   &__wrapper
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
     padding: 0 20px
+    
+    @media $tablet-desktop
+      display: block
 
   &__text
     padding: 20px
     border-radius: 20px
-    border: 1px solid $silver-chalice
+    background-color: darken($white, 5%)
     font(1em, 1.333)
+
+    @media $tablet-desktop
+      background-color: $white
+      border: 1px solid $silver-chalice
 
   &__ph
     margin-bottom: 10px
@@ -32,18 +83,31 @@
       margin-bottom: 0
 
   &__image
-    text-align: right
-    margin-bottom: 5px
-    img
-      display: inline
+    display: none
+
+    @media $tablet-desktop
+      display: block
+      text-align: right
+      margin-bottom: 5px
+
+      img
+        display: inline
 
   &__name
-    width: 110px
     font-weight: 500
+    
+    @media $tablet-desktop
+      width: 110px
 
   &__name
   &__age
   &__city
-    margin-bottom: 5px
-    text-align: right
-    font(0.75em, 1.333)
+    margin-top: 10px
+    margin-right: 10px
+    margin-bottom: 20px
+
+    @media $tablet-desktop
+      margin-top: auto
+      margin-bottom: 5px
+      text-align: right
+      font(0.75em, 1.333)

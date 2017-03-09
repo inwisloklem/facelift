@@ -2,6 +2,9 @@
   overflow: auto
   background-color: $ice-cold
 
+  @media $tablet-desktop
+    padding: 20px 0
+
   &__hgroup
     margin-top: 20px
 
@@ -25,3 +28,14 @@
     
   &__item
     margin-bottom: 20px
+
+    @media $tablet-desktop
+      padding-left: 20px
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    
+    @media $tablet-desktop
+      margin-top: 20px
+      flex-direction: row

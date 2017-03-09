@@ -2,7 +2,13 @@
   overflow: auto
   
   &__background
+    overflow: auto
     text-align: center
+    
+    @media $desktop
+      min-height: 450px
+      background-image: url("../img/background-about.jpg")
+      background-size: cover
 
   &__text
     margin-top: 20px
@@ -10,7 +16,13 @@
     color: $mine-shaft
     text-align: center
     font(1.5em, 1.333, 200, uppercase)
-    
+
+    @media $desktop
+      margin: auto
+      margin-top: 60px
+      margin-bottom: 100px
+      max-width: 520px
+
   &__accent
     color: $royal-blue
     font(1.125em)
@@ -25,11 +37,24 @@
     background-color: darken($white, 5%)
     font(1.3125em, 1.333, 500, uppercase)
 
+    @media $desktop
+      background-color: rgba(darken($white, 5%), 70%)
+
   &__list
+    max-width: 860px
+    margin: auto
     list-style-type: none
     display: flex
     flex-direction: column
     align-items: center
+
+    @media $special
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+
+    @media $desktop
+      margin-top: -90px
 
   &__item
     display: flex
@@ -38,19 +63,17 @@
     margin-bottom: 20px
     font-size: 0
     box-shadow: 0 0 8px 0 rgba($blue-charcoal, 0.2)
-
-    &:nth-of-type(3n+1)
-      margin-right: 40%
-
-    &:nth-of-type(3n+3)
-      margin-left: 40%
+    
+    @media $desktop
+      margin-bottom: 40px
 
   &__desc
     box-sizing: border-box
     padding: 25px
     padding-bottom: 20px
-    // min-height: 100px
+    height: 90px
     text-align: center
     background-color: $robins-egg-blue
     background-image: linear-gradient(to bottom, $robins-egg-blue 0, $feta 100%)
-    font(1.0625rem, 1.333, 200, uppercase)
+    color: $white
+    font(1.125rem, 1.333, 500)

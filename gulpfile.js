@@ -1,8 +1,10 @@
 "use strict";
 
 var gulp = require("gulp");
+var pjson = require("./package.json");
 
 var autoprefixer = require("gulp-autoprefixer");
+var cmq = require("gulp-combine-mq");
 var cssmin = require("gulp-csso");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
@@ -18,6 +20,7 @@ var server = require("browser-sync").create();
 var styl = require("gulp-stylus");
 var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
+var zip = require("gulp-zip");
 
 gulp.task("serve", ["markup", "styles"], function() {
   server.init({
@@ -71,6 +74,7 @@ gulp.task("dist", function(fn) {
     "dist-images",
     "dist-copy",
     // "dist-replace",
+    "dist-zip",
     fn
   );
 });
@@ -95,6 +99,7 @@ gulp.task("dist-images", function() {
 
 gulp.task("dist-styles", function() {
   return gulp.src("app/css/style.css")
+    .pipe(cmq({beautify: true}))
     .pipe(autoprefixer({
       browsers: ["last 2 versions"]
     }))
@@ -107,8 +112,8 @@ gulp.task("dist-markup", function() {
   return gulp.src("app/pages/*.pug")
     .pipe(plumber())
     .pipe(pug())
-    .pipe(prettify({indent_char: " ", indent_size: 2}))
     // .pipe(htmlmin())
+    .pipe(prettify())
     .pipe(gulp.dest("dist"))
     .pipe(server.stream());
 });
@@ -121,4 +126,10 @@ gulp.task("dist-replace", function() {
 
 gulp.task("dist-clean", function() {
   return del(["dist/**/*", "!dist", "!dist/.gitkeep"]);
+});
+
+gulp.task("dist-zip", function() {
+  return gulp.src(["dist/*", "dist/*/**", "!dist/*.zip"])
+  .pipe(zip("dist-" + pjson.name + ".zip"))
+  .pipe(gulp.dest("dist"));
 });

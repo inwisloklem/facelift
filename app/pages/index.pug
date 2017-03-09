@@ -15,8 +15,8 @@ html(lang = "ru")
         .page-header__wrapper
           h3.page-header__note Акция для женщин Москвы
 
-          .regform.page-header__regform
-            h3.regform__title Успей до 13 февраля!
+          .regform.regform--fixed.page-header__regform
+            h3.regform__title Успей до 13 марта!
 
             form.regform__form(action = "#", method = "post")
               input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
@@ -53,27 +53,29 @@ html(lang = "ru")
 
     main
       section.problems.container
-        h2.problems__title
-          | Вам необходима аппаратная процедура омоложения лица, если у вас есть следующие признаки изменения кожи:
-
         figure.problems__image
           img(src = "img/image-problems.jpg", width = 400, height = 358, alt = "Процедура омоложения")
 
-        ul.problems__list
-          li.problems__item явные признаки старения кожи,
-          li.problems__item заметные морщины в области глаз и губ,
-          li.problems__item угревая сыпь,
-          li.problems__item возрастные пигментные пятна,
-          li.problems__item заметная потеря эластичности и упругости кожи,
-          li.problems__item потеря четкости контура овала лица,
-          li.problems__item опущение бровей, нависание и излишки кожи верхних век,
+        .problems__wrapper
+          h2.problems__title
+            | Вам необходима аппаратная процедура омоложения лица, если у вас есть следующие признаки изменения кожи:
 
-      section.about.container
+          ul.problems__list
+            li.problems__item явные признаки старения кожи,
+            li.problems__item заметные морщины в области глаз и губ,
+            li.problems__item угревая сыпь,
+            li.problems__item возрастные пигментные пятна,
+            li.problems__item заметная потеря эластичности и упругости кожи,
+            li.problems__item потеря четкости контура овала лица,
+            li.problems__item опущение бровей, нависание и излишки кожи верхних век
+
+      section.about
         .about__background
-          .about__text 
-            | В эффективности аппаратной методики омоложения лица уже убедились #[span.about__accent более 10&nbsp;000 женщин] по всей России!
+          .container
+            .about__text
+              | В эффективности аппаратной методики омоложения лица уже убедились #[span.about__accent более&nbsp;10&nbsp;000&nbsp;женщин] по&nbsp;всей&nbsp;России!
 
-          h2.about__title О методике
+            h2.about__title О методике
 
         ul.about__list
           li.about__item
@@ -89,10 +91,11 @@ html(lang = "ru")
             figure.about__image
               img(src = "img/image-about-3.jpg", width = 255, height = 255, alt = "Процедура омоложения")
 
-      section.features.container
-        .features__hgroup
-          h2.features__title Хотите здоровую, красивую и упругую кожу?
-          h2.features__title С новой методикой омоложения лица это стало реальностью!
+      section.features
+        .container
+          .features__hgroup
+            h2.features__title Хотите здоровую, красивую и упругую кожу?
+            h2.features__title С новой методикой омоложения лица это стало реальностью!
 
           .features__wrapper
             figure.features__image
@@ -149,7 +152,8 @@ html(lang = "ru")
             figure.results__after
               img.results__img(src = "img/image-6-after.jpg", width = "154", height = "108", alt = "После")
 
-      section.reviews.container
+      section.reviews
+        .container
           h2.reviews__title Отзывы наших клиентов
 
           ul.reviews__list
@@ -185,7 +189,7 @@ html(lang = "ru")
                   img(src = "img/image-avatar.png", width = 80, height = 80, alt = "Аватар")
                 .reviews__name Ирина&nbsp;Круглова
                 .reviews__age 38 лет
-                .reviews__city г. Москва
+                .reviews__city г. Электросталь
 
             li.reviews__item
               .reviews__text
@@ -202,32 +206,33 @@ html(lang = "ru")
                   img(src = "img/image-avatar.png", width = 80, height = 80, alt = "Аватар")
                 .reviews__name Марина Чехова
                 .reviews__age 55 лет
-                .reviews__city г. Москва
+                .reviews__city г. Подольск
 
-      section.prohibit.container
-        h2.prohibit__title Противопоказания к применению процедуры
+      section.prohibit
+        .prohibit__wrapper
+          h2.prohibit__title Противопоказания к применению процедуры
 
-        ul.prohibit__list
-          li.prohibit__item беременность
-          li.prohibit__item лактация
-          li.prohibit__item открытые раны или поражения кожи
-          li.prohibit__item 
-            | металлические и электрические шунты/имплантаты/устройства, 
-            | расположенные в области лица и шеи (зубные имплантаты не являются противопоказанием)
-          li.prohibit__item активная бактериальная, вирусная или грибковая 
-          li.prohibit__item инфекция в местах проведения процедуры
-          li.prohibit__item эпилепсия
-          li.prohibit__item онкологические заболевания
+          ul.prohibit__list
+            li.prohibit__item беременность
+            li.prohibit__item лактация
+            li.prohibit__item открытые раны или поражения кожи
+            li.prohibit__item 
+              | металлические и электрические шунты/имплантаты/устройства, 
+              | расположенные в области лица и шеи (зубные имплантаты не являются противопоказанием)
+            li.prohibit__item активная бактериальная, вирусная или грибковая 
+            li.prohibit__item инфекция в местах проведения процедуры
+            li.prohibit__item эпилепсия
+            li.prohibit__item онкологические заболевания
 
     footer.page-footer
       .regform.page-footer__regform
-        form.regform__form.regform__form--flat(action = "#", method = "post")
+        form.regform__form.regform__form--flat.container(action = "#", method = "post")
           input.regform__name(type = "text", name = "name", placeholder = "Введите ваше имя")
           input.regform__tel(type = "tel", name = "phone", placeholder = "Введите номер телефона")
 
-          button.btn(type = "submit") Записаться
+          button.btn.regform__btn(type = "submit") Записаться
 
-      .page-footer__note.page-footer__note--accent Акция действует до 13 февраля!
+      .page-footer__note.page-footer__note--accent Акция действует до 13 марта!
       .page-footer__note Не упустите свой шанс пройти процедуру омоложения бесплатно!
 
       .timer.page-footer__timer

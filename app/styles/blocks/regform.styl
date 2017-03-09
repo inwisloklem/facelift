@@ -2,14 +2,30 @@
   padding: 20px
   background-color: rgba($white, 50%)
   box-shadow: 0 0 8px 0 rgba($blue-charcoal, 0.2)
+  
+  &--fixed
+    box-sizing: border-box
+    margin: auto
+    max-width: 335px
 
   &__title
-    margin-bottom: 20px
+    margin-bottom: 15px
     text-align: center
     font(1.3125em, 1.333, 500, uppercase)
 
   &__form
     text-align: center
+
+    &--flat
+      @media $tablet-desktop
+        display: flex
+        flex-direction: row
+        padding-top: 20px
+
+        .regform
+          &__name
+          &__tel
+            margin-right: 20px
 
   &__name
   &__tel
@@ -62,3 +78,4 @@
 
     &:focus
       background-image: url("../img/icon-phone-dark.png")
+
