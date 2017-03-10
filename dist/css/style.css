@@ -72,8 +72,10 @@ figure,ul {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  width: 255px;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   margin-bottom: 20px;
+  width: 255px;
   font-size: 0;
   box-shadow: 0 0 8px 0 rgba(1,2,24,0.2);
 }
@@ -137,6 +139,10 @@ figure,ul {
   padding: 0 20px;
 }
 
+.container--top {
+  padding: 0;
+}
+
 .copyright {
   text-align: center;
 }
@@ -188,7 +194,7 @@ figure,ul {
 }
 
 .features__image {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -643,6 +649,10 @@ figure,ul {
     padding: 0 40px;
   }
 
+  .features__image {
+    margin-top: 40px;
+  }
+
   .results__list {
     max-width: 700px;
   }
@@ -717,6 +727,7 @@ figure,ul {
   }
 
   .reviews__text {
+    width: 100%;
     background-color: #fff;
     border: 1px solid #acacac;
   }
@@ -787,7 +798,6 @@ figure,ul {
 
   .container {
     margin: auto;
-    padding: auto;
     max-width: 1100px;
   }
 
